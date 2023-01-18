@@ -1,0 +1,154 @@
+<?php
+/**
+ * @var \Phalcon\Mvc\View\Engine\Php $this
+ */
+?>
+
+<div class="row">
+    <nav>
+        <ul class="pager">
+            <li class="previous"><?php echo $this->tag->linkTo(["user", "Go Back"]) ?></li>
+        </ul>
+    </nav>
+</div>
+
+<div class="page-header">
+    <h1>Create user</h1>
+</div>
+
+<?php echo $this->getContent(); ?>
+
+<form action="user/create" class="form-horizontal" method="post">
+    <div class="form-group">
+    <label for="fieldUsername" class="col-sm-2 control-label">Username</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(["username", "size" => 30, "class" => "form-control", "id" => "fieldUsername"]); ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldSlug" class="col-sm-2 control-label">Slug</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(["slug", "size" => 30, "class" => "form-control", "id" => "fieldSlug"]); ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldPasswordHash" class="col-sm-2 control-label">Password Of Hash</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(["password_hash", "size" => 30, "class" => "form-control", "id" => "fieldPasswordHash"]); ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldReauthenticationToken" class="col-sm-2 control-label">Reauthentication Of Token</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(["reauthentication_token", "size" => 30, "class" => "form-control", "id" => "fieldReauthenticationToken"]); ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldEmail" class="col-sm-2 control-label">Email</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(["email", "size" => 30, "class" => "form-control", "id" => "fieldEmail"]); ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldEmailVerified" class="col-sm-2 control-label">Email Of Verified</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(["email_verified", "size" => 30, "class" => "form-control", "id" => "fieldEmailVerified"]); ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldEmailToken" class="col-sm-2 control-label">Email Of Token</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(["email_token", "size" => 30, "class" => "form-control", "id" => "fieldEmailToken"]); ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldEmailTokenExpires" class="col-sm-2 control-label">Email Of Token Of Expires</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(["email_token_expires", "size" => 30, "class" => "form-control", "id" => "fieldEmailTokenExpires"]); ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldLoginAttempts" class="col-sm-2 control-label">Login Of Attempts</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(["login_attempts", "type" => "number", "class" => "form-control", "id" => "fieldLoginAttempts"]); ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldLockout" class="col-sm-2 control-label">Lockout</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(["lockout", "size" => 30, "class" => "form-control", "id" => "fieldLockout"]); ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldLastLogin" class="col-sm-2 control-label">Last Of Login</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(["last_login", "size" => 30, "class" => "form-control", "id" => "fieldLastLogin"]); ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldLastAction" class="col-sm-2 control-label">Last Of Action</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(["last_action", "size" => 30, "class" => "form-control", "id" => "fieldLastAction"]); ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldIsAdmin" class="col-sm-2 control-label">Is Of Admin</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(["is_admin", "size" => 30, "class" => "form-control", "id" => "fieldIsAdmin"]); ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldCreated" class="col-sm-2 control-label">Created</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(["created", "size" => 30, "class" => "form-control", "id" => "fieldCreated"]); ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldModified" class="col-sm-2 control-label">Modified</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(["modified", "size" => 30, "class" => "form-control", "id" => "fieldModified"]); ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldLanguage" class="col-sm-2 control-label">Language</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(["language", "size" => 30, "class" => "form-control", "id" => "fieldLanguage"]); ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldApplicationId" class="col-sm-2 control-label">Application</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(["application_id", "type" => "number", "class" => "form-control", "id" => "fieldApplicationId"]); ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldStripeId" class="col-sm-2 control-label">Stripe</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(["stripe_id", "size" => 30, "class" => "form-control", "id" => "fieldStripeId"]); ?>
+    </div>
+</div>
+
+
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <?php echo $this->tag->submitButton(["Save", "class" => "btn btn-default"]) ?>
+        </div>
+    </div>
+</form>
