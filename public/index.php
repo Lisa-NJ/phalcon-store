@@ -5,6 +5,8 @@ use Phalcon\Di\FactoryDefault;
 
 error_reporting(E_ALL);
 
+// (new Phalcon\Debug)->listen();  // debug
+
 define('BASE_PATH', dirname(__DIR__));
 define('APP_PATH', BASE_PATH . '/app');
 
@@ -39,7 +41,6 @@ try {
      * Handle the request
      */
     $application = new \Phalcon\Mvc\Application($di);
-
 
     echo $application->handle($_SERVER['REQUEST_URI'])->getContent();
 } catch (\Exception $e) {

@@ -13,7 +13,7 @@ return new \Phalcon\Config([
         'host'        => 'localhost',
         'username'    => 'root',
         'password'    => '666',
-        'dbname'      => 'owl',
+        'dbname'      => 'robotics',
         'charset'     => 'utf8',
     ],
     'application' => [
